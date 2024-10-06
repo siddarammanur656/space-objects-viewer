@@ -9,9 +9,9 @@
 
 ## 🛠️ Features
 
-- **Feature 1:** Brief description of the feature.
-- **Feature 2:** Brief description of the feature.
-- **Feature 3:** Brief description of the feature.
+- **Feature 1:*html* 
+- **Feature 2:*css*
+- **Feature 3:*java script* 
 
 ---
 
