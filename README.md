@@ -30,21 +30,6 @@ To install this project, follow these steps:
    ```
 ---
 
-## 🚀 Usage
-
-### Running the Project
-
-- To run the project, use the following command:
-   ```bash
-
-   ```
-   or for Python:
-   ```bash
-   
-   ```
-
-
-
 
 ## 📫 Contact
 
