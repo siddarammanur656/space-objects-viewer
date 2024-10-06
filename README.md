@@ -29,8 +29,10 @@ To install this project, follow these steps:
    cd neon-orrery
    ```
 ---
-
-
+---
+3.**link to view web app:**
+https://siddarammanur656.github.io/neon-orrery/
+---
 ## 📫 Contact
 
 For questions or suggestions, reach out:
