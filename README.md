@@ -43,40 +43,8 @@ To install this project, follow these steps:
    
    ```
 
-### Example
-
-```bash
-
-```
-
----
-
-## 🤝 Contributing
-
-Contributions are welcome! Here’s how to contribute:
-
-1. **Fork the repository**
-2. **Create a new branch:**
-   ```bash
-  
-   ```
-3. **Make your changes and commit:**
-   ```bash
-   
-   ```
-4. **Push to the branch:**
-   ```bash
- 
-   ```
-5. **Open a Pull Request**
-
----
-
-## 📄 License
 
 
-
----
 
 ## 📫 Contact
 
@@ -84,7 +52,7 @@ For questions or suggestions, reach out:
 
 - **Name:*siddarama mallanna manur* 
 - **Email:*siddarammanur656@gmail.com* 
-- **GitHub:*siddarammanur656* [yourusername](https://github.com/siddarammanur656)
+- **GitHub:*siddarammanur656* [siddarama mallanna manur](https://github.com/siddarammanur656)
 
 ---
 
