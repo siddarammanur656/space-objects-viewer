@@ -36,18 +36,17 @@ To install this project, follow these steps:
 
 - To run the project, use the following command:
    ```bash
-   npm start
+
    ```
    or for Python:
    ```bash
-   python main.py
+   
    ```
 
 ### Example
 
 ```bash
-# Example usage
-command --option value
+
 ```
 
 ---
@@ -59,15 +58,15 @@ Contributions are welcome! Here’s how to contribute:
 1. **Fork the repository**
 2. **Create a new branch:**
    ```bash
-   git checkout -b feature-branch
+  
    ```
 3. **Make your changes and commit:**
    ```bash
-   git commit -m 'Add your feature'
+   
    ```
 4. **Push to the branch:**
    ```bash
-   git push origin feature-branch
+ 
    ```
 5. **Open a Pull Request**
 
@@ -75,7 +74,7 @@ Contributions are welcome! Here’s how to contribute:
 
 ## 📄 License
 
-This project is licensed under the [MIT License](LICENSE).
+
 
 ---
 
