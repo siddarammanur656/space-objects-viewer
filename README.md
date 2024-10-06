@@ -11,7 +11,8 @@
 
 - **Feature 1:*html* 
 - **Feature 2:*css*
-- **Feature 3:*java script* 
+- **Feature 3:*java script*
+- **Feature 4:*java script API*
 
 ---
 
@@ -21,7 +22,7 @@ To install this project, follow these steps:
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/username/repository-name.git
+   git clone https://github.com/siddarammanur656/neon-orrey.git
    ```
 2. **Navigate to the project directory:**
    ```bash
