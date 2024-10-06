@@ -26,17 +26,8 @@ To install this project, follow these steps:
    ```
 2. **Navigate to the project directory:**
    ```bash
-   cd repository-name
+   cd neon-orrery
    ```
-3. **Install dependencies:**
-   ```bash
-   npm install
-   ```
-   or for Python projects:
-   ```bash
-   pip install -r requirements.txt
-   ```
-
 ---
 
 ## 🚀 Usage
@@ -92,10 +83,9 @@ This project is licensed under the [MIT License](LICENSE).
 
 For questions or suggestions, reach out:
 
-- **Name:** Your Name
-- **Email:** [your.email@example.com](mailto:your.email@example.com)
-- **GitHub:** [yourusername](https://github.com/yourusername)
+- **Name:*siddarama mallanna manur* 
+- **Email:*siddarammanur656@gmail.com* 
+- **GitHub:*siddarammanur656* [yourusername](https://github.com/siddarammanur656)
 
 ---
 
-Feel free to adapt this format to fit your project's style and requirements!
