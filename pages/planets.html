@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Planets</title>
+   
+   <link rel="stylesheet" href="../css/bootstrap.min.css">
+   <link rel="stylesheet" href="../css/all.min.css">
+   <link rel="stylesheet" href="../css/normalize.css"> <!-- Corrected 'normlize.css' to 'normalize.css' -->
+   <link rel="stylesheet" href="../css/planets.css">
+   <link rel="stylesheet" href="../css/background.css">
+   <link rel="stylesheet" href="../css/ultimate.css">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="../css/home.css">
+</head>
+
+<body>
+   <!-- Start Background -->
+   <div class="bg-animation">
+      <div id="stars"></div>
+      <div id="stars2"></div>
+      <div id="stars3"></div>
+      <div id="stars4"></div>
+   </div>
+   <!-- End Background -->
+
+   <!-- Start Navbar -->
+   <nav class="navbar navbar-expand-lg navbar-light">
+      <div class="container-fluid justify-content-between">
+         <a class="navbar-brand w-25 logo" href="../index.html">
+            <img src="../images/NASA_logo.svg.png" class="w-100" alt="NASA logo">
+         </a>
+         <button class="navbar-toggler text-bg-transparent" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon text-white">
+               <i class="fas fa-bars"></i>
+            </span>
+         </button>
+         <div class="collapse navbar-collapse justify-content-around" id="navbarNav">
+            <ul class="navbar-nav">
+               <li class="nav-item">
+                  <a class="nav-link" href="../index.html">Home</a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link" href="./earth.html">Earth</a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link active" href="./planets.html">Planets</a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link" href="../asteroids.html">Asteroids</a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link" href="./about.html">About Us</a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link" href="signUp.html">Sign Up</a>
+               </li>
+            </ul>
+         </div>
+      </div>
+   </nav>
+   <!-- End Navbar -->
+
+   <!-- Start Main Content -->
+   <div class="container d-flex align-items-center justify-content-center gap-3" id="mainContent">
+      <div class="left m-0 me-3 p-0">
+         <h4 class="mb-4 text-light" id="index">1/9</h4>
+         <a href="#" id="learnMoreLink" onclick="learnMore()">LEARN MORE</a>
+      </div>
+      <div class="mid position-relative m-0 p-0" id="mid">
+         <img alt="Planet Image" id="planet">
+         <div class="text position-absolute">
+            <h1 id="planetName">Mercury</h1>
+         </div>
+         <div class="shad position-absolute" id="shad"></div>
+      </div>
+      <div class="right ms-4">
+         <div class="tex">
+            <h3 class="text-light mb-0">Year Length</h3>
+            <p class="text-light" id="planetAge">88 Earth days</p>
+         </div>
+         <div class="tex">
+            <h3 class="text-light mb-0">Type</h3>
+            <p class="text-light" id="planetType">Terrestrial</p>
+         </div>
+         <div class="tex">
+            <h3 class="text-light mb-0">Radius</h3>
+            <p class="text-light" id="planetRad">2,439.7 km</p>
+         </div>
+         <div class="tex">
+            <h3 class="text-light mb-0">Temperature</h3>
+            <p class="text-light" id="planetTemp">430°C</p>
+         </div>
+      </div>
+   </div>
+   <!-- End Main Content -->
+
+   <!-- Start Controls -->
+   <div class="controls ps-5 pe-5 d-flex justify-content-around gap-5 align-items-center">
+      <div onclick="prevPlanet()" class="left text-light">
+         <img class="prev" src="../images/prev.png" alt="Previous Planet" width="70px" id="prev"> <!-- Added src for prev image -->
+      </div>
+      <div onclick="nextPlanet()" class="right text-light">
+         <img class="next" src="../images/next.png" alt="Next Planet" width="70px" id="next"> <!-- Added src for next image -->
+      </div>
+   </div>
+   <!-- End Controls -->
+
+   <div id="planetInfoModal" style="display:none; position:fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background: rgba(0, 0, 0, 0.8); padding: 20px; border-radius: 10px; z-index: 1000;">
+      <h2 class="text-light" id="modalPlanetName"></h2>
+      <p class="text-light" id="modalPlanetDetails"></p>
+      <button onclick="closeModal()" class="btn btn-light">Close</button>
+   </div>
+
+   <script src="../js/planets.js"></script>
+</body>
+
+</html>

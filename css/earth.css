@@ -1,0 +1,37 @@
+h1{
+    font-size: 4rem;
+}
+.navbar-expand-lg {
+    padding: 1px 1px;
+    background-color: rgba(193, 15, 140, 0);
+  }
+
+
+
+@media screen and (max-width:1200px){
+
+    .earth{
+        flex-direction: column;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .content{
+        width: 100%;
+    }
+
+    .earth .content h1{
+        text-align: center;
+        margin-top: 50px;
+    }
+
+    .earth .content p{
+        padding: 10px;
+    }
+    .earth .content a{
+        padding: 10px;
+    }
+    
+
+}  

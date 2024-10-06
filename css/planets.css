@@ -1,0 +1,101 @@
+/* planets.css */
+
+/* Main Content Styles */
+#mainContent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: auto;
+}
+
+#planet {
+    max-width: 100%;
+    height: auto;
+    transition: opacity 0.5s ease, box-shadow 0.5s ease;
+    animation: spin 10s infinite linear; /* Added spin animation */
+}
+
+/* Spin Animation */
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Text Styles */
+.text {
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    width: 100%;
+    color: white; /* Ensuring text color is white */
+}
+
+/* Left and Right Content Styles */
+#mainContent .left,
+#mainContent .right {
+    flex: 1;
+    text-align: center;
+}
+
+/* Headings Styles */
+h3 {
+    color: white; /* Ensuring text color is white */
+}
+
+/* Text Information Styles */
+.tex {
+    margin-bottom: 1.5rem;
+}
+
+/* Planet Information Styles with Black Shadow */
+#planetAge,
+#planetType,
+#planetRad,
+#planetTemp {
+     /* Adjust as necessary */
+    color: white; /* Text color for planet information */
+    text-shadow: 2px 2px 4px black; /* Black shadow effect */
+}
+
+/* Background Animation */
+.bg-animation-active {
+    background-color: black; /* Ensure background color remains black */
+}
+
+/* Index Styles */
+#index {
+    color: white; /* Index text color */
+    font-size: 1.2rem; /* Font size for index */
+}
+
+/* Control Buttons */
+#next,
+#prev {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+#next:hover,
+#prev:hover {
+    transform: scale(1.1); /* Slight hover effect */
+}
+
+/* Planet Name Styles with Black Shadow */
+#planetName {
+    font-size: 2.5rem; /* Adjust as necessary */
+    color: white; /* Text color for planet name */
+    text-shadow: 2px 2px 4px black; /* Black shadow effect */
+}
+
+/* Remove Box Shadow */
+#planet {
+    box-shadow: none; /* Removing box shadow from planet */
+}

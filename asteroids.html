@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+  <meta content="utf-8" http-equiv="encoding">
+  <meta name="description" content="A visualization of known and tracked Near Earth Objects, or NEOs, as tracked by NASA's JPL NEO program.
+Many NEOs aren't discovered until they've nearly passed us in their orbit, which is why one side of this graph is so much more populated than the other. The view in our rear-view mirror is better than the one through our windsheild.">
+  <meta http-equiv="cleartype" content="on">
+  <meta property="og:title" content="Asteroid (NEO) Tracker and data visualization"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:description" content="A visualization of known and tracked Near Earth Objects, or NEOs, as tracked by NASA's JPL NEO program.
+Many NEOs aren't discovered until they've nearly passed us in their orbit, which is why one side of this graph is so much more populated than the other. The view in our rear-view mirror is better than the one through our windsheild."/>
+  <meta property="og:image" content=""/>
+  <meta property="og:type"               content="article" />
+	<meta property="article:author" content=""/>
+  <link rel="stylesheet" href="css/astronormalise.css" />
+  <link rel="stylesheet" href="css/astroskeleton.css" />
+  <link rel="stylesheet" href="css/astrostyles.css" />
+  <link rel="shortcut icon" href="">
+  <link rel="apple-touch-icon-precomposed" href="">
+  <link href='//fonts.googleapis.com/css?family=Raleway:400,300,600' rel='stylesheet' type='text/css'>
+
+  <title>Asteroids</title>
+</head>
+<body>
+  <div id="metadata">
+    <div class="row center">
+      <h2>Near-Earth Asteroids</h2>
+    </div>
+    <div class="row">
+      <div class="four columns">
+        <ul class="controls">
+          <li>
+            <label title="As determined by its asteroid absolute V-magnitude (H) value being 24.5 or lower">
+              <input type="checkbox" name="show-big"/>
+              Show asteroids 25 million kilometers and above <em>(2x larger than)</em>
+            </label>
+          </li>
+          <li>
+            <label title="As determined by its asteroid absolute V-magnitude (H) value being 21 or lower">
+              <input type="checkbox" name="show-huge" title="As determined by its asteroid absolute V-magnitude (H) value being 21 or lower"/>
+              Show asteroids 45 million kilometers and above
+            </label>
+          </li>
+          <li>
+            <label class="new" title="As determined by the year of it being discovered being the same year as its close approach date">
+              <input type="checkbox" name="show-new"/>
+               Highlight asteroids we didn't find until they neared Earth
+            </label>
+          </li>
+        </ul>
+      </div>
+      <div class="four columns center">
+        
+      </div>
+      <div class="four columns right key tk-source-code-pro">
+          <div>1 Lunar Distance = 384,400km</div>
+          <div>Moon Diameter = 3,475km</div>
+          <!-- <div>Earth Diameter = 12,742km</div> -->
+          <div>
+          <svg class="legend" width="375px" height="20px">
+            <text x="5" y="15">Small (&lt; 10m)</text>
+            <circle class="asteroid small" cx="95" cy="10" r="1"></circle>
+            <circle class="asteroid small" cx="125" cy="10" r="2"></circle>
+            <circle class="asteroid big" cx="155" cy="10" r="2"></circle>
+            <circle class="asteroid big" cx="185" cy="10" r="3"></circle>
+            <circle class="asteroid huge" cx="215" cy="10" r="3"></circle>
+            <circle class="asteroid huge" cx="245" cy="10" r="4"></circle>
+            <text x="265" y="15">Large (&gt; 300m)</text>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="ticks"></div>
+  <div class="tk-source-code-pro" id="viz">
+    <svg id="sky"></svg>
+  </div>
+  <div class="links">
+    <ul>
+      <li class="control">
+        <label>
+          <input type="checkbox" name="show-onlight"/>
+          Click here  View on white background
+        </label>
+      </li>
+		</ul>
+  </div>
+  <div id="popover" class="popover">
+    <div class="name"><strong id="name"></strong></div>
+    <div><span id="approach"></span></div>
+    <div><span id="minimum"></span></div>
+    <div>estimated size is <strong id="size"></strong></div>
+  </div>
+  <iframe class="widget" data-src=""></iframe>
+  <!-- <script src="modules/d3/d3.js"></script> -->
+  <script src="https://d3js.org/d3.v6.min.js"></script>
+  <script src="https://d3js.org/d3-voronoi.v1.min.js"></script>
+  <script src="js/astrokeyboard.js"></script>
+  <script src="js/asteroids.js"></script>
+  <script src="//use.typekit.net/bvj7kmh.js"></script>
+  <script>try{Typekit.load();}catch(e){}</script>
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-36315921-3', 'auto');
+    ga('send', 'pageview');
+
+  </script>
+</body>
+</html>

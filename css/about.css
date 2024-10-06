@@ -1,0 +1,243 @@
+/**
+ * MAIN
+ *
+ * @format
+ */
+
+ * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+  }
+  
+  /* HEADINGS */
+  h1,h2,h3,h4,h5,h6 {
+    text-shadow:  white;
+    color: white;
+    font-weight: bold;
+    font-size: 4rem;
+  }
+  
+  /* LINKS */
+  a {
+    text-decoration: none;
+  }
+  
+  /* SECTION VISIBILITY ANIMATION */
+  .section {
+    z-index: 100;
+    transform: translateY(150px);
+    opacity: 0.2;
+    transition: opacity 0.5s, transform 1.5s;
+  }
+  
+  .visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  /* NAVBAR */
+  .navbar {
+    backdrop-filter: blur(10px); /* Glassy effect */
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+    border-radius: 15px; /* Rounded edges */
+    padding: 5px 5px; /* Decreased padding for smaller size */
+    position: sticky; /* Make it sticky */
+    top: 0; /* Stick to top */
+    z-index: 1000; /* Ensure it's on top */
+  }
+  
+  .navbar a {
+    color: #fff; /* White text */
+    margin-right: 20px; /* Adjusted margin to bring items closer */
+    font-size: 1.5rem; /* Font size */
+    cursor: pointer; /* Pointer on hover */
+    transition: color 0.3s ease; /* Smooth transition */
+  }
+  
+  .navbar a:hover {
+    color: #ffcc00;
+    transform: scale(1.1); /* Scale up the item on hover */
+    box-shadow: 0 0 10px #ffcc00, 0 0 20px #ffcc00, 0 0 30px #ffcc00; /* Neon glow effect on hover */
+  }
+
+  .navbar .nav-link.active {
+    color: #32df1b; 
+  }
+
+  .navbar-expand-lg {
+    display: flex;
+    justify-content: center; /* Center the navbar content */
+    align-items: center;
+  }
+  
+
+  .navbar-nav {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Reduced spacing between links */
+  }
+
+  nav .logo img {
+    max-width: 80px; /* Reduced logo size for minimal design */
+    position: relative;
+  }
+  
+  
+  /* HEADER */
+  header {
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgb(0, 0, 0)),
+      url("../images/bg22.jpg");
+    filter: brightness(1.2);
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 5;
+    height: 60vh;
+    padding: 10px;
+    border-radius: 0 0 70px 70px;
+  }
+  
+  /* CONTAINER STYLES */
+  .container {
+    z-index: 100;
+    margin-top: 80px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  
+  .container .col-lg-4 {
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+  }
+  
+  /* CARD STYLES */
+  .card {
+    z-index: 200;
+    width: 300px;
+    height: 300px;
+    transform-style: preserve-3d;
+    perspective: 500px;
+    border: none;
+    background-color: inherit;
+  }
+  
+  .card .face {
+    position: absolute;
+    color: #fff;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.06);
+    transform-style: preserve-3d;
+    transition: 0.5s;
+    backface-visibility: hidden;
+    border-top: 1px solid #ddd;
+    border-left: 1px solid #ddd;
+  }
+  
+  .card .face.front-face,
+  .card .face.back-face {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .card .face.front-face .profile {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  .card .face.front-face .name {
+    letter-spacing: 2px;
+  }
+  
+  .card .face.front-face .designation {
+    font-size: 0.8rem;
+    color: #ddd;
+    letter-spacing: 0.8px;
+  }
+  
+  .card:hover .face.front-face {
+    transform: rotateY(180deg);
+  }
+  
+  .card .face.back-face {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.06);
+    transform: rotateY(180deg);
+    padding: 20px 30px;
+    text-align: center;
+    user-select: none;
+  }
+  
+  .card .face.back-face .fa-quote-left {
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    font-size: 1.2rem;
+  }
+  
+  .card .face.back-face .fa-quote-right {
+    position: absolute;
+    bottom: 35px;
+    right: 25px;
+    font-size: 1.2rem;
+  }
+  
+  .card:hover .face.back-face {
+    transform: rotateY(360deg);
+  }
+  
+  /* GRAVITY SECTION */
+  .gravity_section {
+    color: #fff;
+    margin: 60px 0;
+    text-align: start;
+  }
+  
+  .gravity_section h1 {
+    font-size: 4rem;
+    font-weight: bold;
+  }
+  
+  .gravity_section .astronaut img {
+    animation: floating 4s infinite ease-in-out;
+    margin-bottom: 50px;
+  }
+  
+  @keyframes floating {
+    0% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(80px);
+    }
+    100% {
+      transform: translateY(0px);
+    }
+  }
+  
+  /* MEDIA QUERY */
+  @media (max-width: 991.5px) {
+    .earth h1 {
+      text-align: center;
+      margin: 40px 0;
+    }
+  
+    .col-lg-3 {
+      margin-top: 40px;
+      margin-bottom: 20px;
+      display: flex;
+      justify-content: center;
+    }
+  }
+  
