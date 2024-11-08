@@ -9,10 +9,10 @@
 
 ## 🛠️ Features
 
-- **Feature 1:*html* 
-- **Feature 2:*css*
-- **Feature 3:*java script*
-- **Feature 4:*java script API*
+- **Feature 1:*html***
+- **Feature 2:*css***
+- **Feature 3:*java script***
+- **Feature 4:*java script API***
 
 ---
 
@@ -37,9 +37,11 @@ https://siddarammanur656.github.io/neon-orrery/
 
 For questions or suggestions, reach out:
 
-- **Name:*siddarama mallanna manur* 
-- **Email:*siddarammanur656@gmail.com* 
-- **GitHub:*siddarammanur656* [siddarama mallanna manur](https://github.com/siddarammanur656)
+- **Name:*siddarama mallanna manur***
+- **Email:*siddarammanur656@gmail.com***
+- **siddarammanur656** [siddarama mallanna manur](https://github.com/siddarammanur656)
+- **Rajendra0309** [Rajendra Guttedar](https://github.com/Rajendra0309)
+
 
 ---
 
