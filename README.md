@@ -9,10 +9,10 @@
 
 ## 🛠️ Features
 
-- **Feature 1:*html***
-- **Feature 2:*css***
-- **Feature 3:*java script***
-- **Feature 4:*java script API***
+- **Feature 1: *html***
+- **Feature 2: *css***
+- **Feature 3: *java script***
+- **Feature 4: *java script API***
 
 ---
 
@@ -28,7 +28,6 @@ To install this project, follow these steps:
    ```bash
    cd neon-orrery
    ```
----
 ---
 3.**link to view web app:**
 [https://siddarammanur656.github.io/space-objects-viewer/](https://siddarammanur656.github.io/space-objects-viewer/)
