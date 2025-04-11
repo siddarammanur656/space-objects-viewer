@@ -1,4 +1,4 @@
-# neon-orrery
+# space-objects-viewer
 ---
 
 # Create an Orrery Web App that Displays Near-Earth Objects
@@ -31,14 +31,14 @@ To install this project, follow these steps:
 ---
 ---
 3.**link to view web app:**
-https://siddarammanur656.github.io/neon-orrery/
+[https://siddarammanur656.github.io/space-objects-viewer/](https://siddarammanur656.github.io/space-objects-viewer/)
 ---
 ## 📫 Contact
 
 For questions or suggestions, reach out:
 
-- **Name:*siddarama mallanna manur***
-- **Email:*siddarammanur656@gmail.com***
+- **Name: *siddarama mallanna manur***
+- **Email: *siddarammanur656@gmail.com***
 - **siddarammanur656** [siddarama mallanna manur](https://github.com/siddarammanur656)
 - **Rajendra0309** [Rajendra Guttedar](https://github.com/Rajendra0309)
 
