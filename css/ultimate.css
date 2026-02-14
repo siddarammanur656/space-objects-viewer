@@ -29,7 +29,7 @@ a {
 
 .main{
    height: 100vh;
-   background-image: url("../images/main-bg-1.jpg");
+   background-image: url("../images/background-main.jpg");
    background-size: cover;
    transition: 0.5s;
 }

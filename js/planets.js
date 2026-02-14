@@ -1,13 +1,13 @@
 let imgs = [
-   "../images/P_lanets/mercury.png",
-   "../images/P_lanets/venus.png",
-   "../images/P_lanets/earth.png",
-   "../images/P_lanets/mars.png",
-   "../images/P_lanets/jupiter.png",
-   "../images/P_lanets/saturn1.png",
-   "../images/P_lanets/uranus.png",
-   "../images/P_lanets/neptune.png",
-   "../images/P_lanets/sun.png"
+   "../images/planets/planet-mercury.png",
+   "../images/planets/planet-venus.png",
+   "../images/planets/planet-earth.png",
+   "../images/planets/planet-mars.png",
+   "../images/planets/planet-jupiter.png",
+   "../images/planets/planet-saturn.png",
+   "../images/planets/planet-uranus.png",
+   "../images/planets/planet-neptune.png",
+   "../images/planets/planet-sun.png"
 ];
 
 let shads = [

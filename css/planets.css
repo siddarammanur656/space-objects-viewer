@@ -1,101 +1,266 @@
-/* planets.css */
+/* ===== PLANETS PAGE ===== */
 
-/* Main Content Styles */
-#mainContent {
+/* Full-height viewer layout */
+.planet-viewer {
     display: flex;
-    justify-content: center;
     align-items: center;
-    gap: 2rem;
-    max-width: 1200px;
-    margin: auto;
+    justify-content: center;
+    min-height: calc(100vh - 120px);
+    padding: 20px;
+    position: relative;
+    z-index: 10;
+    gap: 20px;
 }
 
-#planet {
-    max-width: 100%;
-    height: auto;
-    transition: opacity 0.5s ease, box-shadow 0.5s ease;
-    animation: spin 10s infinite linear; /* Added spin animation */
+/* 3D Container */
+.planet-3d-container {
+    width: 350px;
+    height: 350px;
+    margin: 0 auto;
+    transition: opacity 0.3s ease;
+    cursor: grab;
 }
 
-/* Spin Animation */
-@keyframes spin {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
+.planet-3d-container:active {
+    cursor: grabbing;
 }
 
-/* Text Styles */
-.text {
-    position: absolute;
-    bottom: 0;
+.planet-3d-container canvas {
+    border-radius: 50%;
+}
+
+/* Center column */
+.planet-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 0 0 auto;
+}
+
+/* Counter */
+.planet-counter {
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.5);
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+/* Planet title */
+.planet-title {
+    font-family: 'Outfit', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #fff;
     text-align: center;
-    width: 100%;
-    color: white; /* Ensuring text color is white */
+    margin-top: 15px;
+    text-shadow: 0 0 20px rgba(100, 180, 255, 0.3);
+    transition: opacity 0.3s ease;
 }
 
-/* Left and Right Content Styles */
-#mainContent .left,
-#mainContent .right {
-    flex: 1;
-    text-align: center;
-}
-
-/* Headings Styles */
-h3 {
-    color: white; /* Ensuring text color is white */
-}
-
-/* Text Information Styles */
-.tex {
-    margin-bottom: 1.5rem;
-}
-
-/* Planet Information Styles with Black Shadow */
-#planetAge,
-#planetType,
-#planetRad,
-#planetTemp {
-     /* Adjust as necessary */
-    color: white; /* Text color for planet information */
-    text-shadow: 2px 2px 4px black; /* Black shadow effect */
-}
-
-/* Background Animation */
-.bg-animation-active {
-    background-color: black; /* Ensure background color remains black */
-}
-
-/* Index Styles */
-#index {
-    color: white; /* Index text color */
-    font-size: 1.2rem; /* Font size for index */
-}
-
-/* Control Buttons */
-#next,
-#prev {
-    width: 50px;
-    height: 50px;
+/* Navigation arrows */
+.planet-nav {
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(10px);
+    color: #fff;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
     cursor: pointer;
-    transition: transform 0.3s ease;
+    transition: all 0.3s ease;
+    flex-shrink: 0;
 }
 
-#next:hover,
-#prev:hover {
-    transform: scale(1.1); /* Slight hover effect */
+.planet-nav:hover {
+    background: rgba(100, 180, 255, 0.15);
+    border-color: rgba(100, 180, 255, 0.4);
+    transform: scale(1.1);
+    box-shadow: 0 0 20px rgba(100, 180, 255, 0.2);
 }
 
-/* Planet Name Styles with Black Shadow */
-#planetName {
-    font-size: 2.5rem; /* Adjust as necessary */
-    color: white; /* Text color for planet name */
-    text-shadow: 2px 2px 4px black; /* Black shadow effect */
+.planet-nav:active {
+    transform: scale(0.95);
 }
 
-/* Remove Box Shadow */
-#planet {
-    box-shadow: none; /* Removing box shadow from planet */
+/* Info Panel */
+.planet-info {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    min-width: 200px;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(10px);
+    border-radius: 16px;
+}
+
+.info-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.info-label {
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.75rem;
+    color: rgba(255, 255, 255, 0.5);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 4px;
+}
+
+.info-value {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #fff;
+}
+
+/* Learn More button */
+.learn-more-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.85rem;
+    color: #64b4ff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border: 1px solid rgba(100, 180, 255, 0.3);
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    margin-top: 8px;
+}
+
+.learn-more-btn:hover {
+    background: rgba(100, 180, 255, 0.1);
+    color: #8ad0ff;
+    border-color: rgba(100, 180, 255, 0.5);
+}
+
+/* Modal */
+.planet-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(8px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.planet-modal-overlay.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.planet-modal {
+    background: rgba(20, 25, 40, 0.95);
+    border: 1px solid rgba(100, 180, 255, 0.2);
+    border-radius: 16px;
+    padding: 40px;
+    max-width: 500px;
+    width: 90%;
+    color: #fff;
+}
+
+.planet-modal h2 {
+    font-family: 'Outfit', sans-serif;
+    font-size: 2rem;
+    margin-bottom: 15px;
+    color: #64b4ff;
+}
+
+.planet-modal p {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 20px;
+}
+
+.modal-close-btn {
+    background: rgba(100, 180, 255, 0.15);
+    border: 1px solid rgba(100, 180, 255, 0.3);
+    color: #64b4ff;
+    padding: 10px 24px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: 'Outfit', sans-serif;
+    transition: all 0.3s ease;
+}
+
+.modal-close-btn:hover {
+    background: rgba(100, 180, 255, 0.25);
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+    .planet-viewer {
+        flex-direction: column;
+        gap: 20px;
+        padding: 10px;
+        min-height: auto;
+    }
+
+    .planet-nav {
+        position: fixed;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 100;
+        width: 44px;
+        height: 44px;
+        font-size: 1rem;
+    }
+
+    .planet-nav-prev {
+        left: 10px;
+    }
+
+    .planet-nav-next {
+        right: 10px;
+    }
+
+    .planet-nav:hover {
+        transform: translateY(-50%) scale(1.1);
+    }
+
+    .planet-3d-container {
+        width: 280px;
+        height: 280px;
+    }
+
+    .planet-title {
+        font-size: 2rem;
+    }
+
+    .planet-info {
+        width: 100%;
+        max-width: 350px;
+        padding: 20px;
+        gap: 12px;
+    }
+}
+
+@media (max-width: 576px) {
+    .planet-3d-container {
+        width: 220px;
+        height: 220px;
+    }
+
+    .planet-title {
+        font-size: 1.6rem;
+    }
 }

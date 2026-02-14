@@ -1,220 +1,348 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-    <link rel="stylesheet" href="../css/background.css">
-    <link rel="stylesheet" href="../css/home.css">
 
-    <link rel="stylesheet" href="../css/about.css">
-    <title>About Us</title>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="../css/background.css">
+  <link rel="stylesheet" href="../css/home.css">
+
+  <link rel="stylesheet" href="../css/about.css">
+  <link rel="icon" type="image/png" href="../Image/solar-system.png">
+  <title>About Us</title>
 </head>
+
 <body class="bg-black">
 
 
 
 
-<!-- Background -->
+  <!-- Background -->
 
 
-<div class="bg-animation">
-  <div id="stars"></div>
-  <div id="stars2"></div>
-  <div id="stars3"></div>
-  <div id="stars4"></div>
-</div>
-  
-<!-- ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
-     
-
- 
- 
-     <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-light ">
+  <div class="bg-animation">
+    <div id="stars"></div>
+    <div id="stars2"></div>
+    <div id="stars3"></div>
+    <div id="stars4"></div>
+  </div>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg" id="mainNav">
     <div class="container-fluid justify-content-between">
-      <a class="navbar-brand w-25 logo "  href="../index.html"><img src="../images/NASA_logo.svg.png" class="w-100"   alt=""></a>
-      <button class="navbar-toggler text-bg-transparent" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon text-white z-3">
-          <i class="fas fa-bars"></i>
-        </span>
+      <a class="navbar-brand logo" href="../index.html">
+        <img src="../images/nasa-logo.png" alt="Space Objects Viewer">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
       </button>
-      <div class="collapse navbar-collapse justify-content-around " id="navbarNav">
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
         <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link" href="../index.html">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="./earth.html">Earth</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="./planets.html">Planets</a>
-            </li>
-            <li class="nav-item ">
-                <a class="nav-link " href="../asteroids.html">Asteroids</a>
-              </li>
-            <li class="nav-item">
-              <a class="nav-link active" href="./about.html">About Us</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="signUp.html">Sign Up</a>
-            </li>
-          </ul>
-          
-    </div>
+          <li class="nav-item">
+            <a class="nav-link" href="../index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./earth.html">Earth</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./planets.html">Planets</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../Solar-System.html">Solar System</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../asteroids.html">Asteroids</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./about.html">About</a>
+          </li>
+        </ul>
+      </div>
     </div>
   </nav>
 
- 
 
-<!-- SECTIONS -->
 
-<section class="container-fluid  mt-4 section">
+
+  <!-- SECTIONS -->
+
+  <section class="container-fluid  mt-4 section">
     <div class="row earth">
-        <div class="col-md-6 d-flex justify-content-center">
-            <img src="../images/earth.png" alt="Earth" class="img-fluid w-75">
-        </div>
-        <div class=" content col-md-6 d-flex flex-column  justify-content-start ">
-            <h1 class="mb-4">About Us</h1>
-            <p class="text-white-50 ">We are a dedicated team of front-end developers passionate about crafting exceptional websites focused on space exploration. Our goal is to inspire curiosity and excitement about the universe by creating visually stunning, interactive, and user-friendly web experiences. With expertise in HTML, CSS, JavaScript, and the latest front-end frameworks, we develop responsive, fast, and accessible websites that work seamlessly across devices.
+      <div class="col-md-6 d-flex justify-content-center align-items-center">
+        <div id="about-earth-globe"></div>
+      </div>
+      <div class=" content col-md-6 d-flex flex-column  justify-content-start ">
+        <h1 class="mb-4">About Us</h1>
+        <p class="text-white-50 ">We are a dedicated team of front-end developers passionate about crafting exceptional
+          websites focused on space exploration. Our goal is to inspire curiosity and excitement about the universe by
+          creating visually stunning, interactive, and user-friendly web experiences. With expertise in HTML, CSS,
+          JavaScript, and the latest front-end frameworks, we develop responsive, fast, and accessible websites that
+          work seamlessly across devices.
 
-                At the heart of our mission is a commitment to quality design and performance. We believe that a well-crafted website can transform complex information into engaging, easy-to-understand content, making space exploration more accessible to everyone—from casual space enthusiasts to researchers and educators. We focus on delivering a smooth user experience, ensuring that visitors can explore space-related content effortlessly while enjoying cutting-edge web technologies.
-                
-                By blending creativity and technical expertise, we aim to make every visit to our site an immersive journey through the cosmos. Whether you're interested in learning about planets, stars, or space missions, or want to explore the latest discoveries in astrophysics, our website is designed to be your gateway to the universe. Join us as we continue to push the boundaries of front-end development to bring the wonders of space to life.</p>
-            
-        </div>
+          At the heart of our mission is a commitment to quality design and performance. We believe that a well-crafted
+          website can transform complex information into engaging, easy-to-understand content, making space exploration
+          more accessible to everyone—from casual space enthusiasts to researchers and educators. We focus on delivering
+          a smooth user experience, ensuring that visitors can explore space-related content effortlessly while enjoying
+          cutting-edge web technologies.
+
+          By blending creativity and technical expertise, we aim to make every visit to our site an immersive journey
+          through the cosmos. Whether you're interested in learning about planets, stars, or space missions, or want to
+          explore the latest discoveries in astrophysics, our website is designed to be your gateway to the universe.
+          Join us as we continue to push the boundaries of front-end development to bring the wonders of space to life.
+        </p>
+
+      </div>
     </div>
-</section>
+  </section>
 
 
-<section>
+  <section>
     <div class="container section">
-        <h1 class="text-center my-5">The Team</h1>
-        <div class="row my-5 ">
-            <div class="col-lg-3">
-                <div class="card">
-                    <div class="face front-face">
-                        <img src="../images/osaaaaama.jpg"
-                            alt="" class="profile">
-                        <div class="pt-3 text-uppercase name">
-                            SIDDARAMA MALLANNA MANUR
-                        </div>
-                        <div class="designation">Web Developer</div>
-                    </div>
-                    <div class="face back-face">
-                        <span class="fas fa-quote-left"></span>
-                        <div class="testimonial">
-                            
-I contributed to the project by designing and implementing the user interface, ensuring a seamless and responsive experience. I also integrated backend services for efficient data handling and functionality across the platform.
-                        </div>
-                        <span class="fas fa-quote-right"></span>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3">
-                <div class="card">
-                    <div class="face front-face">
-                        <img src="../images/s3oooooodi.jpg"
-                            alt="" class="profile">
-                        <div class="pt-3 text-uppercase name">
-                            RAJENDRA GUTTEDAR
-                        </div>
-                        <div class="designation">Backend Developer</div>
-                    </div>
-                    <div class="face back-face">
-                        <span class="fas fa-quote-left"></span>
-                        <div class="testimonial">
-                          I contributed to the project by developing the backend architecture, ensuring efficient data processing and storage. I also integrated APIs and managed server-side functionality to support the frontend and ensure smooth performance.
-                        </div>
-                        <span class="fas fa-quote-right"></span>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3">
-                <div class="card">
-                    <div class="face front-face">
-                        <img src="../images/aymaaaaaan.jpg"
-                            alt="" class="profile">
-                        <div class="pt-3 text-uppercase name">
-                          SUCHANKSH B C
-                        </div>
-                        <div class="designation">Web Developer</div>
-                    </div>
-                    <div class="face back-face">
-                        <span class="fas fa-quote-left"></span>
-                        <div class="testimonial">
-                          I contributed to the project by designing and implementing the user interface, ensuring a seamless and responsive experience. I also integrated backend services for efficient data handling and functionality across the platform.
-                        </div>
-                        <span class="fas fa-quote-right"></span>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3">
-                <div class="card">
-                    <div class="face front-face">
-                        <img src="../images/bahaaaaaa.jpg"
-                            alt="" class="profile">
-                        <div class="pt-3 text-uppercase name">
-                            PRATHAP  
-                        </div>
-                        <div class="designation">Full Stack Developer</div>
-                    </div>
-                    <div class="face back-face">
-                        <span class="fas fa-quote-left"></span>
-                        <div class="testimonial">
-                          I contributed by designing and implementing both the frontend and backend of the project. I ensured seamless user interaction, efficient data handling, and smooth communication between the server and client for optimal performance.
-                        </div>
-                        <span class="fas fa-quote-right"></span>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3">
-              <div class="card">
-                  <div class="face front-face">
-                      <img src="../images/m.jpg"
-                          alt="" class="profile">
-                      <div class="pt-3 text-uppercase name">
-                          MEHAN M 
-                      </div>
-                      <div class="designation">Front End Developer</div>
-                  </div>
-                  <div class="face back-face">
-                      <span class="fas fa-quote-left"></span>
-                      <div class="testimonial">
-                        I contributed by designing and developing the user interface, focusing on creating a responsive and visually appealing experience. I also optimized the user interaction to ensure smooth navigation and functionality across various devices.
-                      </div>
-                      <span class="fas fa-quote-right"></span>
-                  </div>
+      <h1 class="text-center my-5">The Team</h1>
+      <div class="team-row my-5">
+        <div class="team-col">
+          <div class="card">
+            <div class="face front-face">
+              <img src="../images/team-siddarama.jpg" alt="Siddarama Mallanna Manur" class="profile">
+              <div class="pt-3 text-uppercase name">
+                SIDDARAMA MALLANNA MANUR
               </div>
-          </div>
-          <div class="col-lg-3">
-            <div class="card">
-                <div class="face front-face">
-                    <img src="../images/s.jpg"
-                        alt="" class="profile">
-                    <div class="pt-3 text-uppercase name">
-                         BANGARU SATHWIK REDDY
-                    </div>
-                    <div class="designation">Front End Developer</div>
-                </div>
-                <div class="face back-face">
-                    <span class="fas fa-quote-left"></span>
-                    <div class="testimonial">
-                      I contributed by designing and developing the user interface, focusing on creating a responsive and visually appealing experience. I also optimized the user interaction to ensure smooth navigation and functionality across various devices.
-                    </div>
-                    <span class="fas fa-quote-right"></span>
-                </div>
+              <div class="designation">Web Developer</div>
             </div>
-        </div>
-        </div>
-    </div>
-</section>
+            <div class="face back-face">
+              <span class="fas fa-quote-left"></span>
+              <div class="testimonial">
 
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-      <script src="../js/mapdata.js"></script>
-      <script src="../js/worldmap.js"></script>
-      <script src="../js/home.js"></script>
-      
+                I contributed to the project by designing and implementing the user interface, ensuring a seamless and
+                responsive experience. I also integrated backend services for efficient data handling and functionality
+                across the platform.
+              </div>
+              <span class="fas fa-quote-right"></span>
+            </div>
+          </div>
+        </div>
+        <div class="team-col">
+          <div class="card">
+            <div class="face front-face">
+              <img src="../images/team-rajendra.jpg" alt="Rajendra Guttedar" class="profile">
+              <div class="pt-3 text-uppercase name">
+                RAJENDRA GUTTEDAR
+              </div>
+              <div class="designation">Backend Developer</div>
+            </div>
+            <div class="face back-face">
+              <span class="fas fa-quote-left"></span>
+              <div class="testimonial">
+                I contributed to the project by developing the backend architecture, ensuring efficient data processing
+                and storage. I also integrated APIs and managed server-side functionality to support the frontend and
+                ensure smooth performance.
+              </div>
+              <span class="fas fa-quote-right"></span>
+            </div>
+          </div>
+        </div>
+        <div class="team-col">
+          <div class="card">
+            <div class="face front-face">
+              <img src="../images/team-suchanksh.jpg" alt="Suchanksh B C" class="profile">
+              <div class="pt-3 text-uppercase name">
+                SUCHANKSH B C
+              </div>
+              <div class="designation">Web Developer</div>
+            </div>
+            <div class="face back-face">
+              <span class="fas fa-quote-left"></span>
+              <div class="testimonial">
+                I contributed to the project by designing and implementing the user interface, ensuring a seamless and
+                responsive experience. I also integrated backend services for efficient data handling and functionality
+                across the platform.
+              </div>
+              <span class="fas fa-quote-right"></span>
+            </div>
+          </div>
+        </div>
+        <div class="team-col">
+          <div class="card">
+            <div class="face front-face">
+              <img src="../images/team-prathap.jpg" alt="Prathap" class="profile">
+              <div class="pt-3 text-uppercase name">
+                PRATHAP
+              </div>
+              <div class="designation">Full Stack Developer</div>
+            </div>
+            <div class="face back-face">
+              <span class="fas fa-quote-left"></span>
+              <div class="testimonial">
+                I contributed by designing and implementing both the frontend and backend of the project. I ensured
+                seamless user interaction, efficient data handling, and smooth communication between the server and
+                client for optimal performance.
+              </div>
+              <span class="fas fa-quote-right"></span>
+            </div>
+          </div>
+        </div>
+        <div class="team-col">
+          <div class="card">
+            <div class="face front-face">
+              <img src="../images/team-mehan.jpg" alt="Mehan M" class="profile">
+              <div class="pt-3 text-uppercase name">
+                MEHAN M
+              </div>
+              <div class="designation">Front End Developer</div>
+            </div>
+            <div class="face back-face">
+              <span class="fas fa-quote-left"></span>
+              <div class="testimonial">
+                I contributed by designing and developing the user interface, focusing on creating a responsive and
+                visually appealing experience. I also optimized the user interaction to ensure smooth navigation and
+                functionality across various devices.
+              </div>
+              <span class="fas fa-quote-right"></span>
+            </div>
+          </div>
+        </div>
+        <div class="team-col">
+          <div class="card">
+            <div class="face front-face">
+              <img src="../images/team-sathwik.jpg" alt="Bangaru Sathwik Reddy" class="profile">
+              <div class="pt-3 text-uppercase name">
+                BANGARU SATHWIK REDDY
+              </div>
+              <div class="designation">Front End Developer</div>
+            </div>
+            <div class="face back-face">
+              <span class="fas fa-quote-left"></span>
+              <div class="testimonial">
+                I contributed by designing and developing the user interface, focusing on creating a responsive and
+                visually appealing experience. I also optimized the user interaction to ensure smooth navigation and
+                functionality across various devices.
+              </div>
+              <span class="fas fa-quote-right"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end team-row -->
+    </div>
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+  <script src="../js/home.js"></script>
+
+  <!-- Three.js for 3D Earth Globe -->
+  <script src="https://unpkg.com/three@0.127.0/build/three.min.js"></script>
+  <script>
+    (function () {
+      const container = document.getElementById('about-earth-globe');
+      if (!container) return;
+
+      const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
+      renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+      const size = container.clientWidth || 350;
+      renderer.setSize(size, size);
+      container.appendChild(renderer.domElement);
+
+      const scene = new THREE.Scene();
+      const camera = new THREE.PerspectiveCamera(45, 1, 0.1, 1000);
+      camera.position.z = 3;
+
+      // Lighting
+      scene.add(new THREE.AmbientLight(0x333366, 0.6));
+      const dirLight = new THREE.DirectionalLight(0xffffff, 1.2);
+      dirLight.position.set(5, 3, 5);
+      scene.add(dirLight);
+      const rimLight = new THREE.DirectionalLight(0x66ccff, 0.4);
+      rimLight.position.set(-3, 0, -3);
+      scene.add(rimLight);
+
+      // Earth
+      const textureLoader = new THREE.TextureLoader();
+      const earthGeo = new THREE.SphereGeometry(1, 64, 64);
+      const earthMat = new THREE.MeshPhongMaterial({
+        map: textureLoader.load('../Image/earth.jpg'),
+        shininess: 25,
+        specular: new THREE.Color(0x333333)
+      });
+      const earth = new THREE.Mesh(earthGeo, earthMat);
+      earth.rotation.x = 0.15;
+      scene.add(earth);
+
+      // Atmosphere
+      const atmosGeo = new THREE.SphereGeometry(1.06, 64, 64);
+      const atmosMat = new THREE.ShaderMaterial({
+        vertexShader: `varying vec3 vN; void main() { vN = normalize(normalMatrix * normal); gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0); }`,
+        fragmentShader: `varying vec3 vN; void main() { float i = pow(0.65 - dot(vN, vec3(0,0,1)), 3.0); gl_FragColor = vec4(0.3, 0.6, 1.0, 1.0) * i; }`,
+        blending: THREE.AdditiveBlending,
+        side: THREE.BackSide,
+        transparent: true
+      });
+      scene.add(new THREE.Mesh(atmosGeo, atmosMat));
+
+      // Stars
+      const sg = new THREE.BufferGeometry();
+      const sp = new Float32Array(400 * 3);
+      for (let i = 0; i < 400 * 3; i++) sp[i] = (Math.random() - 0.5) * 20;
+      sg.setAttribute('position', new THREE.BufferAttribute(sp, 3));
+      scene.add(new THREE.Points(sg, new THREE.PointsMaterial({ color: 0xffffff, size: 0.02 })));
+
+      // Drag
+      let drag = false, pm = { x: 0, y: 0 }, rv = { x: 0, y: 0 };
+      renderer.domElement.addEventListener('pointerdown', (e) => { drag = true; pm = { x: e.clientX, y: e.clientY }; rv = { x: 0, y: 0 }; });
+      window.addEventListener('pointermove', (e) => { if (!drag) return; rv.x = (e.clientY - pm.y) * 0.005; rv.y = (e.clientX - pm.x) * 0.005; earth.rotation.x += rv.x; earth.rotation.y += rv.y; pm = { x: e.clientX, y: e.clientY }; });
+      window.addEventListener('pointerup', () => { drag = false; });
+
+      function animate() {
+        requestAnimationFrame(animate);
+        if (!drag) { earth.rotation.y += 0.003; rv.x *= 0.95; rv.y *= 0.95; earth.rotation.x += rv.x; earth.rotation.y += rv.y; }
+        renderer.render(scene, camera);
+      }
+      animate();
+
+      const ro = new ResizeObserver(() => { const w = container.clientWidth; renderer.setSize(w, w); });
+      ro.observe(container);
+    })();
+  </script>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 mb-3">
+          <h5 class="footer-heading">Space Objects Viewer</h5>
+          <p class="footer-text">Exploring near-Earth objects, asteroids, comets, and the wonders of our solar system.
+          </p>
+        </div>
+        <div class="col-md-3 mb-3">
+          <h5 class="footer-heading">Quick Links</h5>
+          <ul class="footer-links">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="./earth.html">Earth</a></li>
+            <li><a href="./planets.html">Planets</a></li>
+            <li><a href="./about.html">About</a></li>
+          </ul>
+        </div>
+        <div class="col-md-3 mb-3">
+          <h5 class="footer-heading">Data Sources</h5>
+          <ul class="footer-links">
+            <li><a href="https://www.nasa.gov/" target="_blank" rel="noopener">NASA</a></li>
+            <li><a href="https://cneos.jpl.nasa.gov/" target="_blank" rel="noopener">CNEOS - JPL</a></li>
+          </ul>
+        </div>
+      </div>
+      <hr class="footer-divider">
+      <p class="text-center footer-copyright">&copy; 2025 Space Objects Viewer.</p>
+    </div>
+  </footer>
+  <button class="back-to-top" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
 </body>
+
 </html>

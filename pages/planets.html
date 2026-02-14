@@ -4,19 +4,32 @@
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="icon" type="image/png" href="../Image/solar-system.png">
    <title>Planets</title>
-   
-   <link rel="stylesheet" href="../css/bootstrap.min.css">
-   <link rel="stylesheet" href="../css/all.min.css">
-   <link rel="stylesheet" href="../css/normalize.css"> <!-- Corrected 'normlize.css' to 'normalize.css' -->
-   <link rel="stylesheet" href="../css/planets.css">
-   <link rel="stylesheet" href="../css/background.css">
-   <link rel="stylesheet" href="../css/ultimate.css">
+
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
    <link rel="preconnect" href="https://fonts.googleapis.com">
-   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+   <link rel="stylesheet" href="../css/normalize.css">
+   <link rel="stylesheet" href="../css/background.css">
    <link rel="stylesheet" href="../css/home.css">
+   <link rel="stylesheet" href="../css/planets.css">
+   <style>
+      body {
+         background: #000;
+         margin: 0;
+         padding: 0;
+         font-family: 'Outfit', sans-serif;
+      }
+
+      *,
+      *::before,
+      *::after {
+         box-sizing: border-box;
+      }
+   </style>
 </head>
 
 <body>
@@ -28,19 +41,19 @@
       <div id="stars4"></div>
    </div>
    <!-- End Background -->
-
-   <!-- Start Navbar -->
-   <nav class="navbar navbar-expand-lg navbar-light">
+   <!-- Navbar -->
+   <nav class="navbar navbar-expand-lg" id="mainNav">
       <div class="container-fluid justify-content-between">
-         <a class="navbar-brand w-25 logo" href="../index.html">
-            <img src="../images/NASA_logo.svg.png" class="w-100" alt="NASA logo">
+         <a class="navbar-brand logo" href="../index.html">
+            <img src="../images/nasa-logo.png" alt="Space Objects Viewer">
          </a>
-         <button class="navbar-toggler text-bg-transparent" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon text-white">
-               <i class="fas fa-bars"></i>
-            </span>
+         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
          </button>
-         <div class="collapse navbar-collapse justify-content-around" id="navbarNav">
+         <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
             <ul class="navbar-nav">
                <li class="nav-item">
                   <a class="nav-link" href="../index.html">Home</a>
@@ -49,75 +62,325 @@
                   <a class="nav-link" href="./earth.html">Earth</a>
                </li>
                <li class="nav-item">
-                  <a class="nav-link active" href="./planets.html">Planets</a>
+                  <a class="nav-link" href="./planets.html">Planets</a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link" href="../Solar-System.html">Solar System</a>
                </li>
                <li class="nav-item">
                   <a class="nav-link" href="../asteroids.html">Asteroids</a>
                </li>
                <li class="nav-item">
-                  <a class="nav-link" href="./about.html">About Us</a>
-               </li>
-               <li class="nav-item">
-                  <a class="nav-link" href="signUp.html">Sign Up</a>
+                  <a class="nav-link" href="./about.html">About</a>
                </li>
             </ul>
          </div>
       </div>
    </nav>
-   <!-- End Navbar -->
 
-   <!-- Start Main Content -->
-   <div class="container d-flex align-items-center justify-content-center gap-3" id="mainContent">
-      <div class="left m-0 me-3 p-0">
-         <h4 class="mb-4 text-light" id="index">1/9</h4>
-         <a href="#" id="learnMoreLink" onclick="learnMore()">LEARN MORE</a>
-      </div>
-      <div class="mid position-relative m-0 p-0" id="mid">
-         <img alt="Planet Image" id="planet">
-         <div class="text position-absolute">
-            <h1 id="planetName">Mercury</h1>
-         </div>
-         <div class="shad position-absolute" id="shad"></div>
-      </div>
-      <div class="right ms-4">
-         <div class="tex">
-            <h3 class="text-light mb-0">Year Length</h3>
-            <p class="text-light" id="planetAge">88 Earth days</p>
-         </div>
-         <div class="tex">
-            <h3 class="text-light mb-0">Type</h3>
-            <p class="text-light" id="planetType">Terrestrial</p>
-         </div>
-         <div class="tex">
-            <h3 class="text-light mb-0">Radius</h3>
-            <p class="text-light" id="planetRad">2,439.7 km</p>
-         </div>
-         <div class="tex">
-            <h3 class="text-light mb-0">Temperature</h3>
-            <p class="text-light" id="planetTemp">430°C</p>
-         </div>
-      </div>
-   </div>
-   <!-- End Main Content -->
+   <!-- Planet Viewer -->
+   <div class="planet-viewer">
+      <!-- Navigation Arrow Left -->
+      <button class="planet-nav planet-nav-prev" id="prevBtn" aria-label="Previous planet">
+         <i class="fas fa-chevron-left"></i>
+      </button>
 
-   <!-- Start Controls -->
-   <div class="controls ps-5 pe-5 d-flex justify-content-around gap-5 align-items-center">
-      <div onclick="prevPlanet()" class="left text-light">
-         <img class="prev" src="../images/prev.png" alt="Previous Planet" width="70px" id="prev"> <!-- Added src for prev image -->
+      <!-- Center: 3D Globe + Info -->
+      <div class="planet-center">
+         <div class="planet-counter" id="index">1 / 9</div>
+         <div class="planet-3d-container" id="planet-3d"></div>
+         <h1 class="planet-title" id="planetName">Mercury</h1>
       </div>
-      <div onclick="nextPlanet()" class="right text-light">
-         <img class="next" src="../images/next.png" alt="Next Planet" width="70px" id="next"> <!-- Added src for next image -->
-      </div>
-   </div>
-   <!-- End Controls -->
 
-   <div id="planetInfoModal" style="display:none; position:fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background: rgba(0, 0, 0, 0.8); padding: 20px; border-radius: 10px; z-index: 1000;">
-      <h2 class="text-light" id="modalPlanetName"></h2>
-      <p class="text-light" id="modalPlanetDetails"></p>
-      <button onclick="closeModal()" class="btn btn-light">Close</button>
+      <!-- Info Panel -->
+      <div class="planet-info">
+         <div class="info-item">
+            <span class="info-label">Year Length</span>
+            <span class="info-value" id="planetAge">88 Earth days</span>
+         </div>
+         <div class="info-item">
+            <span class="info-label">Type</span>
+            <span class="info-value" id="planetType">Terrestrial</span>
+         </div>
+         <div class="info-item">
+            <span class="info-label">Radius</span>
+            <span class="info-value" id="planetRad">2,439.7 km</span>
+         </div>
+         <div class="info-item">
+            <span class="info-label">Temperature</span>
+            <span class="info-value" id="planetTemp">430°C</span>
+         </div>
+         <a href="#" class="learn-more-btn" id="learnMoreLink">
+            Learn More <i class="fas fa-arrow-right"></i>
+         </a>
+      </div>
+
+      <!-- Navigation Arrow Right -->
+      <button class="planet-nav planet-nav-next" id="nextBtn" aria-label="Next planet">
+         <i class="fas fa-chevron-right"></i>
+      </button>
    </div>
 
-   <script src="../js/planets.js"></script>
+   <!-- Planet Info Modal -->
+   <div class="planet-modal-overlay" id="planetModalOverlay">
+      <div class="planet-modal">
+         <h2 id="modalPlanetName"></h2>
+         <p id="modalPlanetDetails"></p>
+         <button onclick="closeModal()" class="modal-close-btn">Close</button>
+      </div>
+   </div>
+
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"></script>
+   <script src="../js/home.js"></script>
+
+   <!-- Three.js -->
+   <script src="https://unpkg.com/three@0.127.0/build/three.min.js"></script>
+
+   <!-- Planet 3D Viewer -->
+   <script>
+      (function () {
+         // ===== PLANET DATA =====
+         const planets = [
+            { name: "Mercury", texture: "../Image/mercury.jpg", age: "88 Earth days", type: "Terrestrial", radius: "2,439.7 km", temp: "430°C", glow: [0.7, 0.7, 0.7], size: 0.7, rotSpeed: 0.003, detail: "Mercury is the closest planet to the Sun. It has a cratered surface similar to the Moon, with extreme temperature swings from -180°C at night to 430°C during the day." },
+            { name: "Venus", texture: "../Image/venus.jpg", age: "225 Earth days", type: "Terrestrial", radius: "6,051.8 km", temp: "465°C", glow: [0.9, 0.7, 0.3], size: 0.95, rotSpeed: 0.002, detail: "Venus is the hottest planet in the solar system with a thick atmosphere of carbon dioxide and sulfuric acid clouds. Its surface pressure is 90 times that of Earth." },
+            { name: "Earth", texture: "../Image/earth.jpg", age: "365.25 days", type: "Terrestrial", radius: "6,371 km", temp: "15°C", glow: [0.3, 0.6, 1.0], size: 1.0, rotSpeed: 0.004, detail: "Earth is the only planet known to support life, with a diverse range of ecosystems. 70% of its surface is covered in water." },
+            { name: "Mars", texture: "../Image/mars.jpg", age: "687 Earth days", type: "Terrestrial", radius: "3,389.5 km", temp: "-60°C", glow: [1.0, 0.4, 0.2], size: 0.85, rotSpeed: 0.004, detail: "Mars is known as the Red Planet due to its iron oxide surface. It hosts the largest volcano in the solar system — Olympus Mons." },
+            { name: "Jupiter", texture: "../Image/jupiter.jpg", age: "12 Earth years", type: "Gas Giant", radius: "69,911 km", temp: "-145°C", glow: [0.8, 0.6, 0.4], size: 1.2, rotSpeed: 0.006, detail: "Jupiter is the largest planet in the solar system, known for its Great Red Spot — a storm larger than Earth that has raged for centuries." },
+            { name: "Saturn", texture: "../Image/saturn.jpg", age: "29 Earth years", type: "Gas Giant", radius: "58,232 km", temp: "-178°C", glow: [0.85, 0.75, 0.5], size: 1.1, rotSpeed: 0.005, detail: "Saturn is famous for its spectacular ring system made of ice and rock particles. It has 146 known moons, including Titan." },
+            { name: "Uranus", texture: "../Image/uranus.jpg", age: "84 Earth years", type: "Ice Giant", radius: "25,362 km", temp: "-224°C", glow: [0.5, 0.8, 0.9], size: 1.0, rotSpeed: 0.004, detail: "Uranus has a unique axial tilt of 98°, essentially rolling on its side as it orbits the Sun. This causes extreme 42-year-long seasons." },
+            { name: "Neptune", texture: "../Image/neptune.jpg", age: "165 Earth years", type: "Ice Giant", radius: "24,622 km", temp: "-214°C", glow: [0.2, 0.4, 1.0], size: 1.0, rotSpeed: 0.004, detail: "Neptune is the farthest planet from the Sun. It has the strongest winds in the solar system, reaching speeds of 2,100 km/h." },
+            { name: "Sun", texture: "../Image/sun.jpg", age: "4.6 billion years", type: "G-type Star", radius: "696,340 km", temp: "5,500°C (Surface)", glow: [1.0, 0.6, 0.1], size: 1.3, rotSpeed: 0.002, detail: "The Sun is a G-type main-sequence star containing 99.86% of the solar system's total mass. Its core temperature reaches 15 million °C." }
+         ];
+
+         let currentIndex = 0;
+         const container = document.getElementById('planet-3d');
+
+         // ===== THREE.JS SETUP =====
+         const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
+         renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+         const initSize = Math.min(container.clientWidth, 400) || 350;
+         renderer.setSize(initSize, initSize);
+         container.appendChild(renderer.domElement);
+
+         const scene = new THREE.Scene();
+         const camera = new THREE.PerspectiveCamera(45, 1, 0.1, 1000);
+         camera.position.z = 3;
+
+         // Lighting
+         const ambientLight = new THREE.AmbientLight(0x333366, 0.5);
+         scene.add(ambientLight);
+         const dirLight = new THREE.DirectionalLight(0xffffff, 1.2);
+         dirLight.position.set(5, 3, 5);
+         scene.add(dirLight);
+         const rimLight = new THREE.DirectionalLight(0x66ccff, 0.3);
+         rimLight.position.set(-3, 0, -3);
+         scene.add(rimLight);
+
+         // Planet sphere
+         const textureLoader = new THREE.TextureLoader();
+         const planetGeo = new THREE.SphereGeometry(1, 64, 64);
+         const planetMat = new THREE.MeshPhongMaterial({
+            map: textureLoader.load(planets[0].texture),
+            shininess: 20,
+            specular: new THREE.Color(0x222222)
+         });
+         const planetMesh = new THREE.Mesh(planetGeo, planetMat);
+         planetMesh.rotation.x = 0.15;
+         scene.add(planetMesh);
+
+         // Atmosphere glow
+         const atmosGeo = new THREE.SphereGeometry(1.08, 64, 64);
+         const atmosMat = new THREE.ShaderMaterial({
+            uniforms: {
+               glowColor: { value: new THREE.Vector3(...planets[0].glow) }
+            },
+            vertexShader: `
+            varying vec3 vNormal;
+            void main() {
+               vNormal = normalize(normalMatrix * normal);
+               gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0);
+            }
+         `,
+            fragmentShader: `
+            uniform vec3 glowColor;
+            varying vec3 vNormal;
+            void main() {
+               float intensity = pow(0.6 - dot(vNormal, vec3(0.0, 0.0, 1.0)), 3.0);
+               gl_FragColor = vec4(glowColor, 1.0) * intensity;
+            }
+         `,
+            blending: THREE.AdditiveBlending,
+            side: THREE.BackSide,
+            transparent: true
+         });
+         const atmosMesh = new THREE.Mesh(atmosGeo, atmosMat);
+         scene.add(atmosMesh);
+
+         // Stars
+         const starsGeo = new THREE.BufferGeometry();
+         const starPos = new Float32Array(500 * 3);
+         for (let i = 0; i < 500 * 3; i++) starPos[i] = (Math.random() - 0.5) * 20;
+         starsGeo.setAttribute('position', new THREE.BufferAttribute(starPos, 3));
+         scene.add(new THREE.Points(starsGeo, new THREE.PointsMaterial({ color: 0xffffff, size: 0.02 })));
+
+         // Mouse drag
+         let isDragging = false, prevMouse = { x: 0, y: 0 }, rotVel = { x: 0, y: 0 };
+         renderer.domElement.addEventListener('pointerdown', (e) => {
+            isDragging = true; prevMouse = { x: e.clientX, y: e.clientY }; rotVel = { x: 0, y: 0 };
+         });
+         window.addEventListener('pointermove', (e) => {
+            if (!isDragging) return;
+            rotVel.x = (e.clientY - prevMouse.y) * 0.005;
+            rotVel.y = (e.clientX - prevMouse.x) * 0.005;
+            planetMesh.rotation.x += rotVel.x;
+            planetMesh.rotation.y += rotVel.y;
+            prevMouse = { x: e.clientX, y: e.clientY };
+         });
+         window.addEventListener('pointerup', () => { isDragging = false; });
+
+         // Animation
+         let currentRotSpeed = planets[0].rotSpeed;
+         function animate() {
+            requestAnimationFrame(animate);
+            if (!isDragging) {
+               planetMesh.rotation.y += currentRotSpeed;
+               rotVel.x *= 0.95; rotVel.y *= 0.95;
+               planetMesh.rotation.x += rotVel.x;
+               planetMesh.rotation.y += rotVel.y;
+            }
+            renderer.render(scene, camera);
+         }
+         animate();
+
+         // Resize
+         const ro = new ResizeObserver(() => {
+            const w = Math.min(container.clientWidth, 400);
+            renderer.setSize(w, w);
+         });
+         ro.observe(container);
+
+         // ===== UI UPDATES =====
+         const nameEl = document.getElementById('planetName');
+         const ageEl = document.getElementById('planetAge');
+         const typeEl = document.getElementById('planetType');
+         const radEl = document.getElementById('planetRad');
+         const tempEl = document.getElementById('planetTemp');
+         const indexEl = document.getElementById('index');
+
+         function updatePlanet(idx) {
+            currentIndex = idx;
+            const p = planets[idx];
+
+            // Fade out
+            container.style.opacity = '0';
+            nameEl.style.opacity = '0';
+
+            setTimeout(() => {
+               // Swap texture
+               planetMat.map = textureLoader.load(p.texture);
+               planetMat.needsUpdate = true;
+
+               // Update glow
+               atmosMat.uniforms.glowColor.value.set(...p.glow);
+
+               // Scale
+               planetMesh.scale.setScalar(p.size);
+               atmosMesh.scale.setScalar(p.size);
+               currentRotSpeed = p.rotSpeed;
+
+               // Special: Sun is emissive
+               if (p.name === 'Sun') {
+                  planetMat.emissive = new THREE.Color(0x331100);
+                  planetMat.emissiveIntensity = 0.5;
+               } else {
+                  planetMat.emissive = new THREE.Color(0x000000);
+                  planetMat.emissiveIntensity = 0;
+               }
+
+               // Update text
+               nameEl.textContent = p.name;
+               ageEl.textContent = p.age;
+               typeEl.textContent = p.type;
+               radEl.textContent = p.radius;
+               tempEl.textContent = p.temp;
+               indexEl.textContent = `${idx + 1} / ${planets.length}`;
+
+               // Fade in
+               container.style.opacity = '1';
+               nameEl.style.opacity = '1';
+            }, 300);
+         }
+
+         // Navigation
+         document.getElementById('nextBtn').addEventListener('click', () => {
+            updatePlanet((currentIndex + 1) % planets.length);
+         });
+         document.getElementById('prevBtn').addEventListener('click', () => {
+            updatePlanet((currentIndex - 1 + planets.length) % planets.length);
+         });
+
+         // Keyboard navigation
+         document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowRight') updatePlanet((currentIndex + 1) % planets.length);
+            if (e.key === 'ArrowLeft') updatePlanet((currentIndex - 1 + planets.length) % planets.length);
+         });
+
+         // Learn More modal
+         document.getElementById('learnMoreLink').addEventListener('click', (e) => {
+            e.preventDefault();
+            const p = planets[currentIndex];
+            document.getElementById('modalPlanetName').textContent = p.name;
+            document.getElementById('modalPlanetDetails').textContent = p.detail;
+            document.getElementById('planetModalOverlay').classList.add('active');
+         });
+
+         window.closeModal = function () {
+            document.getElementById('planetModalOverlay').classList.remove('active');
+         };
+
+         // Close modal on overlay click
+         document.getElementById('planetModalOverlay').addEventListener('click', (e) => {
+            if (e.target === e.currentTarget) closeModal();
+         });
+
+         // Init
+         updatePlanet(0);
+      })();
+   </script>
+
+   <!-- Footer -->
+   <footer class="site-footer">
+      <div class="container">
+         <div class="row">
+            <div class="col-md-6 mb-3">
+               <h5 class="footer-heading">Space Objects Viewer</h5>
+               <p class="footer-text">Exploring near-Earth objects, asteroids, comets, and the wonders of our solar
+                  system.</p>
+            </div>
+            <div class="col-md-3 mb-3">
+               <h5 class="footer-heading">Quick Links</h5>
+               <ul class="footer-links">
+                  <li><a href="../index.html">Home</a></li>
+                  <li><a href="./earth.html">Earth</a></li>
+                  <li><a href="./planets.html">Planets</a></li>
+                  <li><a href="./about.html">About</a></li>
+               </ul>
+            </div>
+            <div class="col-md-3 mb-3">
+               <h5 class="footer-heading">Data Sources</h5>
+               <ul class="footer-links">
+                  <li><a href="https://www.nasa.gov/" target="_blank" rel="noopener">NASA</a></li>
+                  <li><a href="https://cneos.jpl.nasa.gov/" target="_blank" rel="noopener">CNEOS - JPL</a></li>
+               </ul>
+            </div>
+         </div>
+         <hr class="footer-divider">
+         <p class="text-center footer-copyright">&copy; 2025 Space Objects Viewer.</p>
+      </div>
+   </footer>
+   <button class="back-to-top" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
 </body>
 
 </html>
